@@ -1,0 +1,12 @@
+
+<div class="dialogContent" mat-dialog-content [style.background-color] = "data.color ? getColorCode(data.color) : '#fccb00'">
+  <h1>{{data.type}} post</h1>
+  <form>
+    <textarea cdkFocusInitial maxlength="200" [style.background-color] = "data.color ? getColorCode(data.color) : '#fccb00'" [(ngModel)]="data.message" name="message" rows="9" ></textarea>
+  </form>
+  <color-github width="300" [colors]="colors" [color]="data.color ? getColorCode(data.color) : '#fccb00'" triangle="hide"(onChange)="handleColorChange($event)"></color-github>
+  <div id="buttonGroup">
+      <button class="cancel" (click)="cancel()" [style.background-color] = "data.color ? getColorCode(data.color) : '#fccb00'">Cancel</button>
+      <button class="save" (click)="save()" [style.background-color] = "data.color ? getColorCode(data.color) : '#fccb00'">Save</button>
+  </div>
+</div>

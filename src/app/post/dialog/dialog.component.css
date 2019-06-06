@@ -1,0 +1,72 @@
+.dialogContent {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.dialogContent > h1 {
+    text-align: center;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    color: #fafafa;
+    border-bottom: 2px solid #fafafa;
+}
+
+.dialogContent textarea{
+    width:100%;
+    resize: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    color: #fafafa;
+    border-bottom: 2px solid #fafafa;
+}
+
+.dialogContent textarea:focus{
+    outline: none;
+}
+
+#buttonGroup {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-top:2px solid #fafafa;
+}
+
+#buttonGroup button {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.cancel{
+    border:2px solid #fafafa;
+    color: #fafafa;
+    opacity: 0.6;
+}
+
+.cancel:hover{
+    background-color: #fafafa !important;
+    color: #444444;
+}
+
+.save{
+    border:2px solid #fafafa;
+    color: #fafafa;
+}
+
+.save:hover{
+    background-color: #fafafa !important;
+    color: #444444;
+}

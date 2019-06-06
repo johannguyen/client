@@ -1,0 +1,9 @@
+<div mat-dialog-content id="confirmDelete">
+  <h3>{{data.confirmMessage}}</h3>
+  <label>{{data.message}}</label>
+
+  <div id="buttonGroup">    
+      <button class="cancel" (click)="cancel()">No</button>
+      <button class="save" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  </div>
+</div>

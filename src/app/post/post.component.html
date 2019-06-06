@@ -1,0 +1,41 @@
+<div id="mainContainer">
+  <div id="addButtonContainer">
+    <div>
+      <input type="text" [(ngModel)]="searchText" placeholder="Filter by message" class="filter">
+      <mat-icon matTooltip="Delete" matTooltipPosition="right" class="clearText" (click)="clearSearch()">clear</mat-icon>
+      <mat-form-field class="formField">
+        <mat-label>Websocket mode</mat-label>
+        <mat-select [(ngModel)]="webSocketMode" (selectionChange)="checkSocketMode($event.value)">
+          <mat-option value="on">ON</mat-option>
+          <mat-option value="off">OFF</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="formField">
+        <mat-label>Sort by</mat-label>
+        <mat-select [(ngModel)]="sortBy">
+          <mat-option value="message">Message</mat-option>
+          <mat-option value="createdDate">Created date</mat-option>
+          <mat-option value="lastModifiedDate">Last modified date</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formField">
+        <mat-label>Sort direction</mat-label>
+        <mat-select [(ngModel)]="sortDirection">
+          <mat-option value="asc">Ascendant</mat-option>
+          <mat-option value="desc">Descendant</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button class="add" (click)="openNewDialog()"><mat-icon>add</mat-icon></button>  
+    </div>  
+  </div>
+  <div id="postContainer">    
+    <div *ngFor="let post of (posts | filter:searchText:'message') | sort:sortDirection:sortBy" class="post" [style.background-color]="getColorCode(post.color)"  (click)="openEditDialog($event, post)">
+      <div>
+          <p matTooltip="Click to edit.">{{post.message}}</p>
+          <mat-icon matTooltip="Delete" matTooltipPosition="right" class="clearIcon"  (click)="delete($event, post)">delete_forever</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

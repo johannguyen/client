@@ -1,0 +1,54 @@
+h3, label {
+    color: #444444;
+}
+
+#confirmDelete{
+    position: relative;
+    height: 100%;
+    text-align: center;
+    border-radius: 4px !important;
+}
+#buttonGroup {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#buttonGroup button {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:focus{
+    outline: 0;
+}
+
+.cancel{
+    border:2px solid #444444;
+    color: #444444;
+    opacity: 0.6;
+}
+
+.cancel:hover{
+    background-color: #444444 !important;
+    color: #fafafa;
+}
+
+.save{
+    border:2px solid #444444;
+    color: #444444;
+}
+
+.save:hover{
+    background-color: #444444 !important;
+    color: #fafafa;
+}

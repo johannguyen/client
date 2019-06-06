@@ -127,7 +127,7 @@ export class PostComponent implements OnInit {
     let dialogRef = this.dialog.open(DialogComponent, {
       width: '300px',
       height:'300px',
-      data: {message: "", color: "", type:"Add"}
+      data: {message: "", color: "e1b500", type:"Add"}
     });
 
     dialogRef.afterClosed().subscribe(result => {
